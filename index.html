@@ -129,7 +129,7 @@ footer{padding:50px 0 40px;text-align:center;color:var(--m);font:13px var(--mono
 <div class="stats">
 <div class="glass stat"><b class="grad" data-n="4">0</b><span>Internships &amp; roles</span></div>
 <div class="glass stat"><b class="grad" data-n="20" data-s="+">0</b><span>SQL reports delivered</span></div>
-<div class="glass stat"><b class="grad" data-n="4">0</b><span>Flagship projects</span></div>
+<div class="glass stat"><b class="grad" data-n="4" data-s="+">0</b><span>Projects built</span></div>
 <div class="glass stat"><b class="grad" data-n="1">0</b><span>Hackathon win 🏆</span></div>
 </div></div></section>
 
@@ -180,7 +180,7 @@ const $=s=>document.querySelector(s);
 if(PHOTO){$('#photo').src=PHOTO;$('#photo').style.display='block';$('#mono').style.display='none';$('#ph').style.display='none'}
 
 const exp=[
-{r:'Trainee Data Engineer — Core Banking Transformation',c:'Habib Bank Limited (HBL)',d:'Jan 2026 – Present',s:'Enterprise ETL, regulatory reporting, banking data transformation and core banking migration.',l:['Developed and maintained SSIS ETL pipelines and SQL Server stored procedures for the end-to-end extraction and reporting workflow for Cash Transaction Reports (CTR).','Contributed to the ENZO / Temenos Data Hub migration, supporting reporting during branch migration and validating migrated banking data.','Developed 20+ SQL-based reports from BRDs using Microsoft Report Builder and SSRS.','Handled business-driven data requests: transaction analysis, multi-table joins, transformations and legacy banking schemas.','Designed an Informatica ETL application transforming Temenos-sourced SDS data into FD tables via mappings and transformation workflows.','Collaborated with the team lead on ETL deployment and integration in production reporting systems.'],t:['SQL Server','T-SQL','SSIS','SSRS','Informatica','Temenos','ETL']},
+{r:'Data Engineer — Core Banking Transformation',c:'Habib Bank Limited (HBL)',d:'Jan 2026 – Present',s:'Enterprise ETL, regulatory reporting, banking data transformation and core banking migration.',l:['Developed and maintained SSIS ETL pipelines and SQL Server stored procedures for the end-to-end extraction and reporting workflow for Cash Transaction Reports (CTR).','Contributed to the ENZO / Temenos Data Hub migration, supporting reporting during branch migration and validating migrated banking data.','Developed 20+ SQL-based reports from BRDs using Microsoft Report Builder and SSRS.','Handled business-driven data requests: transaction analysis, multi-table joins, transformations and legacy banking schemas.','Designed an Informatica ETL application transforming Temenos-sourced SDS data into FD tables via mappings and transformation workflows.','Collaborated with the team lead on ETL deployment and integration in production reporting systems.'],t:['SQL Server','T-SQL','SSIS','SSRS','Informatica','Temenos','ETL']},
 {r:'Data Science Intern',c:'10Pearls',d:'Sep 2025 – Nov 2025',s:'End-to-end air quality forecasting: data engineering, ML, MLOps and explainability.',l:['Built a real-time AQI forecasting pipeline using Open-Meteo and OpenAQ, with a failover mechanism for data availability.','Engineered preprocessing: imputation, anomaly correction, lag features and rolling statistics.','Implemented a Feast feature store for training/serving consistency.','Trained Random Forest and XGBoost models for multi-day forecasts; integrated SHAP explainability.','Automated ingestion, feature updates, retraining and deployment with GitHub Actions CI/CD.','Exposed forecasts via Flask REST API on Railway, plus a React monitoring dashboard.'],t:['Python','XGBoost','Feast','SHAP','Flask','React','GitHub Actions']},
 {r:'AI Intern',c:'CoreTech Innovations',d:'Aug 2025 – Sep 2025',s:'',l:['Developed preprocessing pipelines for multiple ML/DL datasets, improving consistency for downstream modelling.','Researched and evaluated deep learning architectures across use cases.','Produced comparative analysis reports to support model selection and experimentation.'],t:['Machine Learning','Deep Learning','Model Evaluation']},
 {r:'Computer Vision Intern',c:'Neuro Computational Lab',d:'Sep 2023 – Oct 2023',s:'',l:['Worked on diabetic retinopathy detection using CNN-based models on annotated retinal images.','Explored GAN-based synthetic image generation to improve dataset diversity and generalization.'],t:['CNNs','GANs','Medical Imaging']}];
@@ -222,7 +222,7 @@ const dm=Math.hypot(a.x-mouse.x,a.y-mouse.y);if(dm<160){cx.strokeStyle=`rgba(34,
 const out=$('#out'),inp=$('#cmd');
 const say=(t,c)=>{const d=document.createElement('div');if(c)d.className=c;d.textContent=t;out.appendChild(d);out.scrollTop=out.scrollHeight};
 const C={help:()=>'Commands: about · experience · projects · skills · education · achievements · contact · resume · clear · sudo',
-about:()=>'Warda Iftikhar — AI Engineer × Data Engineer. Trainee Data Engineer at HBL, building AI safety tooling on the side. Karachi, Pakistan.',
+about:()=>'Warda Iftikhar — AI Engineer × Data Engineer. Data Engineer at HBL, building AI safety tooling on the side. Karachi, Pakistan.',
 experience:()=>exp.map(e=>`• ${e.r} @ ${e.c} (${e.d})`).join('\n'),
 projects:()=>pj.map(p=>`• ${p.n} (${p.w})`).join('\n'),
 skills:()=>Object.entries(sk).map(([k,v])=>`${k}: ${v.replace(/,/g,' · ')}`).join('\n\n'),
